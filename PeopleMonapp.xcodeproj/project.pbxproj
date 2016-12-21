@@ -243,7 +243,7 @@
 				TargetAttributes = {
 					0E0453AC1E088A3800A2D259 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = LGU82C9CG3;
+						DevelopmentTeam = NAX77QPRD4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -479,10 +479,10 @@
 			baseConfigurationReference = 6ED3D384C5B3EF672AA40022 /* Pods-PeopleMonapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LGU82C9CG3;
+				DEVELOPMENT_TEAM = NAX77QPRD4;
 				INFOPLIST_FILE = PeopleMonapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luke.PeopleMonapp;
+				PRODUCT_BUNDLE_IDENTIFIER = rigel.PeopleMonapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -493,10 +493,10 @@
 			baseConfigurationReference = D9A9ECB379FF8AA0F0BF04B9 /* Pods-PeopleMonapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LGU82C9CG3;
+				DEVELOPMENT_TEAM = NAX77QPRD4;
 				INFOPLIST_FILE = PeopleMonapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luke.PeopleMonapp;
+				PRODUCT_BUNDLE_IDENTIFIER = rigel.PeopleMonapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
