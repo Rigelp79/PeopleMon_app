@@ -43,7 +43,7 @@ class MapViewController: UIViewController, SegueHandlerType {
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.mapView.mapType = MKMapType.hybrid
-        let myArea = MKCoordinateRegionMakeWithDistance(self.locationManager.location!.coordinate, 500, 500)
+        let myArea = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 500, 500)
         self.mapView.setRegion(myArea, animated: true)
         mapView.showsUserLocation = true
         mapView.isZoomEnabled = false
