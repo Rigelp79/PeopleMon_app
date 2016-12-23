@@ -36,6 +36,7 @@
 		0E7286261E09857F008C905D /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7286251E09857F008C905D /* PersonCell.swift */; };
 		0E7286281E0985B8008C905D /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7286271E0985B8008C905D /* ConversationCell.swift */; };
 		0E72862B1E098658008C905D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E72862A1E098658008C905D /* Login.storyboard */; };
+		0EEC11D81E0B14040049E71E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EEC11D71E0B14040049E71E /* MapKit.framework */; };
 		79E233B7AB5F0E426EF44F3D /* Pods_PeopleMonapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B5F2EA70A84853F4E9866A /* Pods_PeopleMonapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		0E7286251E09857F008C905D /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		0E7286271E0985B8008C905D /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		0E72862A1E098658008C905D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0EEC11D71E0B14040049E71E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0EEC11D91E0B149A0049E71E /* PeopleMonapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PeopleMonapp.entitlements; sourceTree = "<group>"; };
 		6ED3D384C5B3EF672AA40022 /* Pods-PeopleMonapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleMonapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleMonapp/Pods-PeopleMonapp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4B5F2EA70A84853F4E9866A /* Pods_PeopleMonapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleMonapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A9ECB379FF8AA0F0BF04B9 /* Pods-PeopleMonapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleMonapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleMonapp/Pods-PeopleMonapp.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EEC11D81E0B14040049E71E /* MapKit.framework in Frameworks */,
 				79E233B7AB5F0E426EF44F3D /* Pods_PeopleMonapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,10 +113,11 @@
 		0E0453AF1E088A3800A2D259 /* PeopleMonapp */ = {
 			isa = PBXGroup;
 			children = (
+				0EEC11D91E0B149A0049E71E /* PeopleMonapp.entitlements */,
 				0E7285EC1E08CF94008C905D /* Components */,
-				0E7285FB1E08D951008C905D /* Models */,
-				0E7286061E08DB0D008C905D /* Networking */,
 				0E72860D1E08DC72008C905D /* ViewControllers */,
+				0E7286061E08DB0D008C905D /* Networking */,
+				0E7285FB1E08D951008C905D /* Models */,
 				0E7286291E0985EB008C905D /* Storyboards */,
 				0E0453B01E088A3800A2D259 /* AppDelegate.swift */,
 				0E0453B71E088A3800A2D259 /* Assets.xcassets */,
@@ -150,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				0E7286071E08DB4B008C905D /* NetworkModel.swift */,
-				0E7286091E08DBB2008C905D /* WebServices.swift */,
 				0E72860B1E08DBF1008C905D /* WebServicesExtension.swift */,
+				0E7286091E08DBB2008C905D /* WebServices.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 		4DA21D5596F52D41D68640A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EEC11D71E0B14040049E71E /* MapKit.framework */,
 				B4B5F2EA70A84853F4E9866A /* Pods_PeopleMonapp.framework */,
 			);
 			name = Frameworks;
@@ -245,6 +251,14 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = NAX77QPRD4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -479,10 +493,11 @@
 			baseConfigurationReference = 6ED3D384C5B3EF672AA40022 /* Pods-PeopleMonapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PeopleMonapp/PeopleMonapp.entitlements;
 				DEVELOPMENT_TEAM = NAX77QPRD4;
 				INFOPLIST_FILE = PeopleMonapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rigelpreston.PeopleMonapp;
+				PRODUCT_BUNDLE_IDENTIFIER = rigel.PeopleMonapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -493,10 +508,11 @@
 			baseConfigurationReference = D9A9ECB379FF8AA0F0BF04B9 /* Pods-PeopleMonapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PeopleMonapp/PeopleMonapp.entitlements;
 				DEVELOPMENT_TEAM = NAX77QPRD4;
 				INFOPLIST_FILE = PeopleMonapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rigelpreston.PeopleMonapp;
+				PRODUCT_BUNDLE_IDENTIFIER = rigel.PeopleMonapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

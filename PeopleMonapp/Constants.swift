@@ -96,7 +96,8 @@ enum Images : String {
     case Avatar
     
     func image() -> UIImage {
-        return UIImage(named: self.rawValue)!
+      // return UIImage(named: self.rawValue)!
+         return UIImage(named: "DefaultImage")!
     }
 }
 
